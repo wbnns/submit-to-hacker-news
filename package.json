@@ -1,0 +1,43 @@
+{
+  "name": "submit-to-hacker-news",
+  "version": "1.2.0",
+  "description": "Submit to Hacker News with title optimization and duplicate detection using keyboard shortcuts",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo \"No linting configured yet\"",
+    "package:chrome": "zip -r submit-to-hacker-news-chrome.zip . -x '*.git*' '*node_modules*' 'package*.json' 'CONTRIBUTING.md' '*.md' 'manifest-v2.json'",
+    "package:firefox": "zip -r submit-to-hacker-news-firefox.zip . -x '*.git*' '*node_modules*' 'package*.json' 'CONTRIBUTING.md' '*.md' 'manifest.json'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/submit-to-hacker-news.git"
+  },
+  "keywords": [
+    "browser-extension",
+    "hacker-news",
+    "chrome-extension", 
+    "firefox-addon",
+    "productivity",
+    "automation",
+    "duplicate-detection",
+    "title-optimization",
+    "keyboard-shortcuts",
+    "webextension"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/submit-to-hacker-news/issues"
+  },
+  "homepage": "https://github.com/yourusername/submit-to-hacker-news#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88",
+    "Firefox >= 109"
+  ]
+}
