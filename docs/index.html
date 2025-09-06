@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit to Hacker News - Browser Extension</title>
-    <meta name="description" content="Browser extension for submitting to Hacker News with smart title optimization, duplicate detection, and built-in guidelines.">
+    <title>Submit to Hacker News Extension - Smart Title Optimization & Duplicate Detection</title>
+    <meta name="description" content="Free browser extension for Chrome, Firefox, Edge & Brave. Submit to Hacker News with automatic title optimization, duplicate detection across 1000+ stories, and built-in HN guidelines. Install in seconds.">
     
-    <!-- Open Graph / Social Media -->
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="hacker news extension, hacker news submit, browser extension, chrome extension, firefox addon, duplicate detection, title optimization, HN guidelines, productivity, automation, webextension">
+    <meta name="author" content="wbnns">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wbnns.github.io/submit-to-hacker-news/">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wbnns.github.io/submit-to-hacker-news/">
-    <meta property="og:title" content="Submit to Hacker News - Browser Extension">
-    <meta property="og:description" content="Smart title optimization, duplicate detection, and HN guidelines built-in.">
+    <meta property="og:site_name" content="Submit to Hacker News Extension">
+    <meta property="og:title" content="Submit to Hacker News Extension - Smart Title Optimization & Duplicate Detection">
+    <meta property="og:description" content="Free browser extension for Chrome, Firefox, Edge & Brave. Submit to Hacker News with automatic title optimization, duplicate detection, and built-in HN guidelines.">
+    <meta property="og:image" content="https://wbnns.github.io/submit-to-hacker-news/icons/icon-128.png">
+    <meta property="og:image:width" content="128">
+    <meta property="og:image:height" content="128">
+    <meta property="og:image:alt" content="Submit to Hacker News Extension Icon">
+    <meta property="og:locale" content="en_US">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../icons/icon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../icons/icon-16.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@wbnns">
+    <meta name="twitter:creator" content="@wbnns">
+    <meta name="twitter:url" content="https://wbnns.github.io/submit-to-hacker-news/">
+    <meta name="twitter:title" content="Submit to Hacker News Extension - Smart Title Optimization & Duplicate Detection">
+    <meta name="twitter:description" content="Free browser extension for Chrome, Firefox, Edge & Brave. Submit to Hacker News with automatic title optimization, duplicate detection, and built-in HN guidelines.">
+    <meta name="twitter:image" content="https://wbnns.github.io/submit-to-hacker-news/icons/icon-128.png">
+    <meta name="twitter:image:alt" content="Submit to Hacker News Extension Icon">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" sizes="128x128" href="icons/icon-128.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/icon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+    <meta name="theme-color" content="#ff6600">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,7 +49,7 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-brand">
-                <img src="../icons/icon-32.png" alt="HN" class="nav-logo">
+                <img src="icons/icon-32.png" alt="HN" class="nav-logo">
                 <span class="nav-title">Submit to Hacker News</span>
             </div>
             <div class="nav-links">
@@ -84,7 +110,7 @@
                         <div class="browser-content">
                             <div class="extension-ui">
                                 <div class="extension-header">
-                                    <img src="../icons/icon-32.png" alt="HN" class="extension-icon">
+                                    <img src="icons/icon-32.png" alt="HN" class="extension-icon">
                                     <h3>Submit to Hacker News</h3>
                                     <span class="guidelines-link">Guidelines</span>
                                 </div>
@@ -274,9 +300,9 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Ready to improve your HN submissions?</h2>
+                <h2 class="cta-title">Easily submit to HN</h2>
                 <p class="cta-description">
-                    Join developers who are already submitting better content to Hacker News.
+                    No more duplicates. Submit in seconds with optimized titles that follow HN guidelines.
                 </p>
                 <div class="cta-actions">
                     <a href="#install" class="btn btn-primary btn-large">Install Extension</a>
@@ -294,7 +320,7 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="footer-brand">
-                        <img src="../icons/icon-32.png" alt="HN" class="footer-logo">
+                        <img src="icons/icon-32.png" alt="HN" class="footer-logo">
                         <span class="footer-title">Submit to Hacker News</span>
                     </div>
                     <p class="footer-description">
@@ -339,5 +365,9 @@
             }
         });
     </script>
+
+    <!-- 100% privacy-first analytics -->
+    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
 </body>
 </html>
