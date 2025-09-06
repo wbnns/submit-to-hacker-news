@@ -27,14 +27,14 @@ A powerful browser extension that enhances your Hacker News submission experienc
 The extension shows your page title (optimized for HN guidelines) with an editable field:
 
 ```
-🟠 Submit to Hacker News              Guidelines
+🟠 Submit to Hacker News
 
 Page: "10 Amazing Python Tips - TechBlog"
 URL: https://techblog.com/python-tips
 
 Title (editable): Python Tips  [optimized ✨]
                    
-                   [Submit]
+[Submit]
 ```
 
 ### Duplicate Detection
