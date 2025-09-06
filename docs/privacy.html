@@ -3,154 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Submit to Hacker News Extension</title>
-    <meta name="description" content="Privacy policy for Submit to Hacker News browser extension. Learn how we protect your data and what information we access.">
+    <title>Terms of Use and Privacy Policy - Submit to Hacker News Extension</title>
+    <meta name="description" content="Terms of Use and Privacy Policy for Submit to Hacker News browser extension">
     <link rel="canonical" href="https://hn.wbnns.com/privacy">
-    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        .privacy-content {
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #ffffff;
+            color: #1f2937;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
-            line-height: 1.7;
-        }
-        
-        .privacy-content h1 {
-            color: #111827;
-            margin-bottom: 1rem;
-        }
-        
-        .privacy-content h2 {
-            color: #1f2937;
-            margin: 2.5rem 0 1rem 0;
-            font-size: 1.5rem;
-        }
-        
-        .privacy-content h3 {
-            color: #374151;
-            margin: 2rem 0 0.75rem 0;
-            font-size: 1.25rem;
-        }
-        
-        .privacy-content p {
-            color: #4b5563;
-            margin-bottom: 1rem;
-        }
-        
-        .privacy-content ul {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-        
-        .privacy-content li {
-            color: #4b5563;
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight {
-            background: #f0f9ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #0ea5e9;
-            margin: 1.5rem 0;
+            padding: 40px 24px;
         }
         
         .back-link {
-            color: #ff6600;
+            color: #6b7280;
             text-decoration: none;
-            font-weight: 500;
+            font-size: 0.875rem;
+            margin-bottom: 32px;
             display: inline-block;
-            margin-bottom: 2rem;
+            transition: color 0.2s ease;
         }
         
         .back-link:hover {
+            color: #ff6600;
+        }
+        
+        .content {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 48px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #111827;
+        }
+        
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: #ff6600;
             text-decoration: underline;
+        }
+        
+        a:hover {
+            opacity: 0.8;
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background: #e5e7eb;
+            margin: 2rem 0;
+        }
+        
+        .effective-date {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #6b7280;
+        }
+        
+        .intro-text {
+            background: rgba(255, 102, 0, 0.05);
+            border-left: 4px solid #ff6600;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .intro-text p {
+            color: #1f2937;
+            margin-bottom: 0;
+        }
+        
+        strong {
+            color: #1f2937;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <div class="privacy-content">
-        <a href="/" class="back-link">← Back to Extension</a>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Submit to Hacker News</a>
         
-        <h1>Privacy Policy</h1>
-        <p><em>Last updated: January 2025</em></p>
+        <div class="content">
+            <h1>Terms of Use and Privacy Policy</h1>
+            <p class="effective-date">
+                <strong>Effective Date: January 2025</strong>
+            </p>
 
-        <div class="highlight">
-            <strong>TL;DR:</strong> This extension only accesses your current tab's URL and title when you use it. 
-            It checks for duplicates using Hacker News' official API. No personal data is collected or stored.
-        </div>
+            <div class="intro-text">
+                <p>
+                    <strong>
+                        This document outlines the terms of use and privacy practices for the Submit to Hacker News browser extension. 
+                        By installing and using this extension, you agree to these terms.
+                    </strong>
+                </p>
+            </div>
 
-        <h2>Data Collection</h2>
-        
-        <h3>What We Access</h3>
-        <ul>
-            <li><strong>Current tab URL</strong> - Only when you actively use the extension</li>
-            <li><strong>Current tab title</strong> - Only when you actively use the extension</li>
-        </ul>
+            <hr>
 
-        <h3>What We DON'T Collect</h3>
-        <ul>
-            <li>❌ <strong>No personal information</strong> (name, email, etc.)</li>
-            <li>❌ <strong>No browsing history</strong> beyond the current active tab</li>
-            <li>❌ <strong>No stored data</strong> or cookies</li>
-            <li>❌ <strong>No analytics or tracking</strong></li>
-            <li>❌ <strong>No user accounts</strong> or authentication</li>
-        </ul>
+            <h2>1. About This Extension</h2>
+            <p>
+                The Submit to Hacker News extension is a free, open-source browser extension that helps users submit content to Hacker News 
+                with optimized titles, duplicate detection, and built-in community guidelines.
+            </p>
 
-        <h2>How Data Is Used</h2>
+            <hr>
 
-        <h3>Local Processing Only</h3>
-        <ul>
-            <li><strong>Title optimization</strong> happens entirely in your browser</li>
-            <li><strong>No data sent to our servers</strong> - we don't have any servers</li>
-            <li><strong>No data stored locally</strong> beyond the current session</li>
-        </ul>
+            <h2>2. Privacy Policy</h2>
+            
+            <p><strong>Data We Access:</strong></p>
+            <ul>
+                <li>Current tab URL (only when you actively use the extension)</li>
+                <li>Current tab title (only when you actively use the extension)</li>
+            </ul>
+            
+            <p><strong>Data We DON'T Collect:</strong></p>
+            <ul>
+                <li>❌ No personal information (name, email, etc.)</li>
+                <li>❌ No browsing history beyond the current tab</li>
+                <li>❌ No stored data or cookies</li>
+                <li>❌ No analytics or tracking</li>
+                <li>❌ No user accounts or authentication</li>
+            </ul>
 
-        <h3>Hacker News API Usage</h3>
-        <p>When checking for duplicate submissions:</p>
-        <ul>
-            <li><strong>Your current tab URL</strong> is sent to <code>hacker-news.firebaseio.com</code> (Hacker News' official API)</li>
-            <li><strong>Purpose</strong>: To search for existing submissions of the same URL</li>
-            <li><strong>No personal identification</strong> attached to these requests</li>
-            <li><strong>This is the same data</strong> that would be sent when you submit to HN manually</li>
-        </ul>
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>Title optimization happens entirely in your browser</li>
+                <li>URL is sent to Hacker News' official API for duplicate checking</li>
+                <li>No data is sent to our servers (we don't have any)</li>
+                <li>No data is stored beyond the current session</li>
+            </ul>
 
-        <h2>Permissions Explained</h2>
+            <hr>
 
-        <h3>activeTab Permission</h3>
-        <ul>
-            <li><strong>What it does</strong>: Allows access to the current active tab's URL and title</li>
-            <li><strong>When it's used</strong>: Only when you click the extension icon or use the keyboard shortcut</li>
-            <li><strong>Scope</strong>: Limited to the one tab you're viewing</li>
-            <li><strong>Cannot access</strong>: Other tabs, browsing history, bookmarks, or stored data</li>
-        </ul>
+            <h2>3. Third Party Services</h2>
+            <p>
+                <strong>Hacker News API:</strong> When checking for duplicates, your current tab URL is sent to 
+                <code>hacker-news.firebaseio.com</code> (Hacker News' official API). This is governed by 
+                <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's Privacy Policy</a>.
+            </p>
 
-        <h2>Third Party Services</h2>
+            <hr>
 
-        <h3>Hacker News API (Firebase)</h3>
-        <ul>
-            <li><strong>Service</strong>: <code>hacker-news.firebaseio.com</code></li>
-            <li><strong>Data sent</strong>: Current page URL (for duplicate checking only)</li>
-            <li><strong>Governed by</strong>: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
-            <li><strong>Official HN API</strong>: Same service used by Hacker News itself</li>
-        </ul>
+            <h2>4. Terms of Use</h2>
+            
+            <p><strong>Acceptance of Terms:</strong></p>
+            <p>
+                By installing and using this extension, you agree to these terms. If you do not agree, please uninstall the extension.
+            </p>
+            
+            <p><strong>Proper Use:</strong></p>
+            <p>You agree to:</p>
+            <ul>
+                <li>Use the extension only for lawful purposes</li>
+                <li>Follow Hacker News community guidelines when submitting content</li>
+                <li>Not attempt to reverse engineer or modify the extension</li>
+                <li>Not use the extension to spam or abuse Hacker News</li>
+            </ul>
 
-        <h3>No Other Third Parties</h3>
-        <ul>
-            <li>❌ <strong>No analytics services</strong></li>
-            <li>❌ <strong>No advertising networks</strong></li>
-            <li>❌ <strong>No data brokers</strong></li>
-            <li>❌ <strong>No social media tracking</strong></li>
-        </ul>
+            <hr>
 
-        <h2>Contact</h2>
-        <p>Questions about this privacy policy? <a href="https://github.com/wbnns/submit-to-hacker-news/issues" target="_blank">Create a GitHub issue</a> with the "privacy" label.</p>
+            <h2>5. Open Source License</h2>
+            <p>
+                This extension is open source under the MIT License. All code is publicly available and auditable at 
+                <a href="https://github.com/wbnns/submit-to-hacker-news" target="_blank">GitHub</a>. You may modify and distribute 
+                the code according to the MIT License terms.
+            </p>
 
-        <div class="highlight">
-            <strong>Open Source:</strong> All code is publicly available at 
-            <a href="https://github.com/wbnns/submit-to-hacker-news" target="_blank">GitHub</a> 
-            for full transparency and auditability.
+            <hr>
+
+            <h2>6. No Warranty and Limitation of Liability</h2>
+            <p>
+                <strong>This extension is provided "as is" without any warranty.</strong> We make no guarantees about its functionality, 
+                availability, or suitability for any particular purpose.
+            </p>
+            <p>
+                <strong>The extension developers shall not be liable for any damages</strong> arising from the use of this extension, 
+                including but not limited to data loss, service interruptions, or incorrect submissions to Hacker News.
+            </p>
+            <p>
+                Use this extension at your own risk.
+            </p>
+
+            <hr>
+
+            <h2>7. Changes to These Terms</h2>
+            <p>
+                We may update these terms and privacy practices occasionally. Changes will be reflected in extension updates and on this page. 
+                Continued use of the extension constitutes acceptance of any changes.
+            </p>
+
+            <hr>
+
+            <h2>8. Contact and Support</h2>
+            <p>
+                Questions about these terms, privacy practices, or the extension? 
+                <a href="https://github.com/wbnns/submit-to-hacker-news/issues" target="_blank">Create a GitHub issue</a> 
+                with the appropriate label.
+            </p>
+
+            <hr>
+
+            <div class="highlight">
+                <p>
+                    <strong>Open Source Transparency:</strong> All code is publicly available for audit and contribution. 
+                    This extension prioritizes your privacy and follows open source best practices.
+                </p>
+            </div>
+
+            <p style="text-align: center; color: #6b7280; margin-top: 2rem;">
+                <strong style="color: #1f2937;">Submit to Hacker News Extension</strong><br>
+                Created by <a href="https://x.com/wbnns" target="_blank">wbnns</a> for the Hacker News community
+            </p>
         </div>
     </div>
 </body>

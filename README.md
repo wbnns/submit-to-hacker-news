@@ -197,7 +197,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: [GitHub Issues](https://github.com/wbnns/submit-to-hacker-news/issues)
 - **Features**: [Feature Requests](https://github.com/wbnns/submit-to-hacker-news/issues/new?assignees=&labels=enhancement&template=feature_request.md)
 - **Bugs**: [Bug Reports](https://github.com/wbnns/submit-to-hacker-news/issues/new?assignees=&labels=bug&template=bug_report.md)
-- **Privacy**: [Privacy Policy](PRIVACY.md)
+- **Privacy**: [Terms of Use and Privacy Policy](https://hn.wbnns.com/privacy.html)
 
 ---
 
