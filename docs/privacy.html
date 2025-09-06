@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Submit to Hacker News Extension</title>
+    <meta name="description" content="Privacy policy for Submit to Hacker News browser extension. Learn how we protect your data and what information we access.">
+    <link rel="canonical" href="https://hn.wbnns.com/privacy">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .privacy-content h1 {
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-content h2 {
+            color: #1f2937;
+            margin: 2.5rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        
+        .privacy-content h3 {
+            color: #374151;
+            margin: 2rem 0 0.75rem 0;
+            font-size: 1.25rem;
+        }
+        
+        .privacy-content p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .privacy-content li {
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background: #f0f9ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+            margin: 1.5rem 0;
+        }
+        
+        .back-link {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-content">
+        <a href="/" class="back-link">← Back to Extension</a>
+        
+        <h1>Privacy Policy</h1>
+        <p><em>Last updated: January 2025</em></p>
+
+        <div class="highlight">
+            <strong>TL;DR:</strong> This extension only accesses your current tab's URL and title when you use it. 
+            It checks for duplicates using Hacker News' official API. No personal data is collected or stored.
+        </div>
+
+        <h2>Data Collection</h2>
+        
+        <h3>What We Access</h3>
+        <ul>
+            <li><strong>Current tab URL</strong> - Only when you actively use the extension</li>
+            <li><strong>Current tab title</strong> - Only when you actively use the extension</li>
+        </ul>
+
+        <h3>What We DON'T Collect</h3>
+        <ul>
+            <li>❌ <strong>No personal information</strong> (name, email, etc.)</li>
+            <li>❌ <strong>No browsing history</strong> beyond the current active tab</li>
+            <li>❌ <strong>No stored data</strong> or cookies</li>
+            <li>❌ <strong>No analytics or tracking</strong></li>
+            <li>❌ <strong>No user accounts</strong> or authentication</li>
+        </ul>
+
+        <h2>How Data Is Used</h2>
+
+        <h3>Local Processing Only</h3>
+        <ul>
+            <li><strong>Title optimization</strong> happens entirely in your browser</li>
+            <li><strong>No data sent to our servers</strong> - we don't have any servers</li>
+            <li><strong>No data stored locally</strong> beyond the current session</li>
+        </ul>
+
+        <h3>Hacker News API Usage</h3>
+        <p>When checking for duplicate submissions:</p>
+        <ul>
+            <li><strong>Your current tab URL</strong> is sent to <code>hacker-news.firebaseio.com</code> (Hacker News' official API)</li>
+            <li><strong>Purpose</strong>: To search for existing submissions of the same URL</li>
+            <li><strong>No personal identification</strong> attached to these requests</li>
+            <li><strong>This is the same data</strong> that would be sent when you submit to HN manually</li>
+        </ul>
+
+        <h2>Permissions Explained</h2>
+
+        <h3>activeTab Permission</h3>
+        <ul>
+            <li><strong>What it does</strong>: Allows access to the current active tab's URL and title</li>
+            <li><strong>When it's used</strong>: Only when you click the extension icon or use the keyboard shortcut</li>
+            <li><strong>Scope</strong>: Limited to the one tab you're viewing</li>
+            <li><strong>Cannot access</strong>: Other tabs, browsing history, bookmarks, or stored data</li>
+        </ul>
+
+        <h2>Third Party Services</h2>
+
+        <h3>Hacker News API (Firebase)</h3>
+        <ul>
+            <li><strong>Service</strong>: <code>hacker-news.firebaseio.com</code></li>
+            <li><strong>Data sent</strong>: Current page URL (for duplicate checking only)</li>
+            <li><strong>Governed by</strong>: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+            <li><strong>Official HN API</strong>: Same service used by Hacker News itself</li>
+        </ul>
+
+        <h3>No Other Third Parties</h3>
+        <ul>
+            <li>❌ <strong>No analytics services</strong></li>
+            <li>❌ <strong>No advertising networks</strong></li>
+            <li>❌ <strong>No data brokers</strong></li>
+            <li>❌ <strong>No social media tracking</strong></li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>Questions about this privacy policy? <a href="https://github.com/wbnns/submit-to-hacker-news/issues" target="_blank">Create a GitHub issue</a> with the "privacy" label.</p>
+
+        <div class="highlight">
+            <strong>Open Source:</strong> All code is publicly available at 
+            <a href="https://github.com/wbnns/submit-to-hacker-news" target="_blank">GitHub</a> 
+            for full transparency and auditability.
+        </div>
+    </div>
+</body>
+</html>
