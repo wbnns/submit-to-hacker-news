@@ -58,7 +58,7 @@ We may update these terms and privacy practices occasionally. Changes will be re
 
 ## Contact and Support
 
-Questions about these terms, privacy practices, or the extension? [Create a GitHub issue](https://github.com/wbnns/submit-to-hacker-news/issues) with the appropriate label.
+Questions about these terms, privacy practices, or the extension? [Create a GitHub issue](https://github.com/wbnns/submit-to-hacker-news/issues).
 
 ---
 
