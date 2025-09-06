@@ -188,9 +188,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/submit-to-hacker-news/issues)
-- **Features**: [Feature Requests](https://github.com/yourusername/submit-to-hacker-news/issues/new?template=feature_request.md)
-- **Bugs**: [Bug Reports](https://github.com/yourusername/submit-to-hacker-news/issues/new?template=bug_report.md)
+- **Issues**: [GitHub Issues](https://github.com/wbnns/submit-to-hacker-news/issues)
+- **Features**: [Feature Requests](https://github.com/wbnns/submit-to-hacker-news/issues/new?assignees=&labels=enhancement&template=feature_request.md)
+- **Bugs**: [Bug Reports](https://github.com/wbnns/submit-to-hacker-news/issues/new?assignees=&labels=bug&template=bug_report.md)
 
 ---
 
