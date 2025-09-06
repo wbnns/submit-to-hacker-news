@@ -46,3 +46,6 @@ submit-to-hacker-news-*.zip
 
 # Logs
 *.log
+
+# Claude Code files
+.claude/
