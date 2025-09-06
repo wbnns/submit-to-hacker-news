@@ -2,7 +2,7 @@
 
 A powerful browser extension that enhances your Hacker News submission experience with smart title optimization, duplicate detection, and built-in guidelines.
 
-![Extension Screenshot](https://img.shields.io/badge/version-1.2-orange) ![License](https://img.shields.io/badge/license-MIT-blue) ![Browser Support](https://img.shields.io/badge/browsers-Chrome%20%7C%20Firefox-green)
+![Extension Screenshot](https://img.shields.io/badge/version-1.2-orange) ![License](https://img.shields.io/badge/license-MIT-blue) ![Browser Support](https://img.shields.io/badge/browsers-Chrome%20%7C%20Firefox%20%7C%20Edge%20%7C%20Brave-green)
 
 ## ✨ Features
 
@@ -53,6 +53,20 @@ Show HN: My Python Learning Tool
 ### Chrome
 1. Download or clone this repository
 2. Open Chrome and go to `chrome://extensions/`
+3. Enable "Developer mode" (top right toggle)
+4. Click "Load unpacked" and select the extension folder
+5. The extension will appear in your toolbar
+
+### Microsoft Edge
+1. Download or clone this repository
+2. Open Edge and go to `edge://extensions/`
+3. Enable "Developer mode" (left sidebar toggle)
+4. Click "Load unpacked" and select the extension folder
+5. The extension will appear in your toolbar
+
+### Brave Browser
+1. Download or clone this repository
+2. Open Brave and go to `brave://extensions/`
 3. Enable "Developer mode" (top right toggle)
 4. Click "Load unpacked" and select the extension folder
 5. The extension will appear in your toolbar

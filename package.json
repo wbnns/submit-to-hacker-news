@@ -38,6 +38,8 @@
   },
   "browserslist": [
     "Chrome >= 88",
-    "Firefox >= 109"
+    "Firefox >= 109", 
+    "Edge >= 88",
+    "Chrome >= 88"
   ]
 }
