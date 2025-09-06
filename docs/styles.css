@@ -767,6 +767,16 @@ section {
     grid-template-columns: 1fr;
   }
   
+  .feature-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
   .steps-container {
     flex-direction: column;
     gap: 2rem;
