@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit to Hacker News - Browser Extension</title>
+    <meta name="description" content="Browser extension for submitting to Hacker News with smart title optimization, duplicate detection, and built-in guidelines.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wbnns.github.io/submit-to-hacker-news/">
+    <meta property="og:title" content="Submit to Hacker News - Browser Extension">
+    <meta property="og:description" content="Smart title optimization, duplicate detection, and HN guidelines built-in.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/icon-16.png">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../icons/icon-32.png" alt="HN" class="nav-logo">
+                <span class="nav-title">Submit to Hacker News</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#install" class="nav-link">Install</a>
+                <a href="https://github.com/wbnns/submit-to-hacker-news" class="nav-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Submit to <span class="hero-highlight">Hacker News</span> 
+                    <br>with confidence
+                </h1>
+                <p class="hero-description">
+                    Browser extension with smart title optimization, duplicate detection, 
+                    and built-in HN guidelines. Submit better content faster.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Stories Checked</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Browsers Supported</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">⌨️</div>
+                        <div class="stat-label">Keyboard Shortcuts</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#install" class="btn btn-primary">Install Extension</a>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news" class="btn btn-secondary" target="_blank">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View Source
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="extension-preview">
+                    <div class="browser-window">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="browser-title">Submit to Hacker News</div>
+                        </div>
+                        <div class="browser-content">
+                            <div class="extension-ui">
+                                <div class="extension-header">
+                                    <img src="../icons/icon-32.png" alt="HN" class="extension-icon">
+                                    <h3>Submit to Hacker News</h3>
+                                    <span class="guidelines-link">Guidelines</span>
+                                </div>
+                                <div class="page-info">
+                                    <div class="page-title">10 Amazing Python Tips - TechBlog</div>
+                                    <div class="page-url">https://techblog.com/python-tips</div>
+                                </div>
+                                <div class="title-optimization">
+                                    <div class="optimization-badge">✨ Optimized</div>
+                                    <div class="optimized-title">Python Tips</div>
+                                </div>
+                                <div class="title-input">
+                                    <label>Title (editable):</label>
+                                    <input type="text" value="Python Tips" class="title-field">
+                                </div>
+                                <button class="submit-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything you need to submit great content</h2>
+                <p class="section-description">
+                    Built for the Hacker News community, following all guidelines and best practices.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Smart Title Optimization</h3>
+                    <p class="feature-description">
+                        Automatically removes site names, converts "10 Ways to..." to "How to...", 
+                        and follows HN title guidelines.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Duplicate Detection</h3>
+                    <p class="feature-description">
+                        Scans 1000+ recent stories in seconds to find existing submissions. 
+                        Shows the highest-scoring version.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3 class="feature-title">Built-in Guidelines</h3>
+                    <p class="feature-description">
+                        Complete HN submission guidelines built into the extension. 
+                        Perfect for newcomers and pros alike.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-description">
+                        One keyboard shortcut (Ctrl+Shift+H) opens the extension. 
+                        Background processing keeps it responsive.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Cross-Browser</h3>
+                    <p class="feature-description">
+                        Works on Chrome, Firefox, Edge, and Brave. 
+                        Same great experience everywhere.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-description">
+                        Only requests activeTab permission. No data collection, 
+                        no analytics, no tracking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="install" class="install">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Install in seconds</h2>
+                <p class="section-description">
+                    Choose your browser and get started immediately.
+                </p>
+            </div>
+            <div class="install-grid">
+                <div class="install-card">
+                    <div class="install-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="install-title">Chrome</h3>
+                    <ol class="install-steps">
+                        <li>Go to <code>chrome://extensions/</code></li>
+                        <li>Enable "Developer mode"</li>
+                        <li>Click "Load unpacked"</li>
+                        <li>Select the extension folder</li>
+                    </ol>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news/archive/refs/heads/main.zip" class="install-btn">
+                        Download for Chrome
+                    </a>
+                </div>
+                <div class="install-card">
+                    <div class="install-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="install-title">Firefox</h3>
+                    <ol class="install-steps">
+                        <li>Go to <code>about:debugging</code></li>
+                        <li>Click "This Firefox"</li>
+                        <li>Click "Load Temporary Add-on"</li>
+                        <li>Select <code>manifest-v2.json</code></li>
+                    </ol>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news/archive/refs/heads/main.zip" class="install-btn">
+                        Download for Firefox
+                    </a>
+                </div>
+                <div class="install-card">
+                    <div class="install-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="install-title">Edge & Brave</h3>
+                    <ol class="install-steps">
+                        <li>Go to browser extensions page</li>
+                        <li>Enable "Developer mode"</li>
+                        <li>Click "Load unpacked"</li>
+                        <li>Select the extension folder</li>
+                    </ol>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news/archive/refs/heads/main.zip" class="install-btn">
+                        Download for Edge/Brave
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How it works</h2>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Press Ctrl+Shift+H</h3>
+                        <p>Open the extension on any webpage you want to submit</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Review & Edit</h3>
+                        <p>See the optimized title and make any adjustments</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Submit</h3>
+                        <p>Click submit or press Ctrl+Enter to post to HN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to improve your HN submissions?</h2>
+                <p class="cta-description">
+                    Join developers who are already submitting better content to Hacker News.
+                </p>
+                <div class="cta-actions">
+                    <a href="#install" class="btn btn-primary btn-large">Install Extension</a>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news" class="btn btn-secondary btn-large" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-brand">
+                        <img src="../icons/icon-32.png" alt="HN" class="footer-logo">
+                        <span class="footer-title">Submit to Hacker News</span>
+                    </div>
+                    <p class="footer-description">
+                        Made with ❤️ by <a href="https://x.com/wbnns" target="_blank">wbnns</a> for the Hacker News community
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/wbnns/submit-to-hacker-news" target="_blank">GitHub</a>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news/issues" target="_blank">Issues</a>
+                    <a href="https://github.com/wbnns/submit-to-hacker-news/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
+                    <a href="https://news.ycombinator.com/newsguidelines.html" target="_blank">HN Guidelines</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 wbnns. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
