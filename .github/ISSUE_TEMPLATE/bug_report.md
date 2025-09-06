@@ -24,9 +24,10 @@ A clear and concise description of what actually happened.
 If applicable, add screenshots to help explain your problem.
 
 ## 🌐 Environment
-- **Browser**: Chrome/Firefox
+- **Browser**: Chrome/Firefox/Edge/Brave/Other
 - **Browser Version**: [e.g. Chrome 120.0.0.0]
 - **Extension Version**: [e.g. 1.2.0]
+- **Extension Folder Used**: chromium/ or firefox/
 - **Operating System**: [e.g. macOS, Windows 11, Ubuntu]
 
 ## 🔗 URL Details

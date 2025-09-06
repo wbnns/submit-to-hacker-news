@@ -2,7 +2,7 @@
 
 A powerful browser extension that enhances your Hacker News submission experience with smart title optimization, duplicate detection, and built-in guidelines.
 
-![Extension Screenshot](https://img.shields.io/badge/version-1.2-orange) ![License](https://img.shields.io/badge/license-MIT-blue) ![Browser Support](https://img.shields.io/badge/browsers-Chrome%20%7C%20Firefox%20%7C%20Edge%20%7C%20Brave-green)
+![Extension Screenshot](https://img.shields.io/badge/version-1.2-orange) ![License](https://img.shields.io/badge/license-MIT-blue) ![Browser Support](https://img.shields.io/badge/browsers-All%20Major%20Browsers-green)
 
 ## ✨ Features
 
