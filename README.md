@@ -50,25 +50,14 @@ Show HN: My Python Learning Tool
 
 ## 🚀 Installation
 
-### Chrome
+### Chrome, Edge, Brave
 1. Download or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" (top right toggle)
-4. Click "Load unpacked" and select the extension folder
-5. The extension will appear in your toolbar
-
-### Microsoft Edge
-1. Download or clone this repository
-2. Open Edge and go to `edge://extensions/`
-3. Enable "Developer mode" (left sidebar toggle)
-4. Click "Load unpacked" and select the extension folder
-5. The extension will appear in your toolbar
-
-### Brave Browser
-1. Download or clone this repository
-2. Open Brave and go to `brave://extensions/`
-3. Enable "Developer mode" (top right toggle)
-4. Click "Load unpacked" and select the extension folder
+2. Open your browser's extensions page:
+   - Chrome: `chrome://extensions/`
+   - Edge: `edge://extensions/`  
+   - Brave: `brave://extensions/`
+3. Enable "Developer mode"
+4. Click "Load unpacked" and select the **`chromium/`** folder
 5. The extension will appear in your toolbar
 
 ### Firefox
@@ -76,7 +65,7 @@ Show HN: My Python Learning Tool
 2. Open Firefox and go to `about:debugging`
 3. Click "This Firefox" in the left sidebar
 4. Click "Load Temporary Add-on..."
-5. Select the `manifest-v2.json` file from the extension folder
+5. Select the **`firefox/manifest.json`** file
 6. The extension will appear in your toolbar
 
 ## ⌨️ Usage
@@ -111,11 +100,17 @@ Show HN: My Python Learning Tool
 ### Project Structure
 ```
 submit-to-hacker-news/
-├── manifest.json          # Chrome extension manifest (v3)
-├── manifest-v2.json       # Firefox extension manifest (v2)  
-├── popup.html            # Extension popup interface
-├── popup.js              # Main functionality and logic
-├── icons/                # Extension icons (16px to 128px)
+├── chromium/             # Chrome, Edge, Brave extension
+│   ├── manifest.json     # Manifest V3
+│   ├── popup.html        # Extension popup interface
+│   ├── popup.js          # Main functionality and logic
+│   └── icons/            # Extension icons (16px to 128px)
+├── firefox/              # Firefox extension  
+│   ├── manifest.json     # Manifest V2 (named for Mozilla validation)
+│   ├── popup.html        # Extension popup interface
+│   ├── popup.js          # Main functionality and logic
+│   └── icons/            # Extension icons (16px to 128px)
+├── docs/                 # GitHub Pages website
 └── README.md             # This file
 ```
 
@@ -128,13 +123,24 @@ submit-to-hacker-news/
 ### Local Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/submit-to-hacker-news.git
+   git clone https://github.com/wbnns/submit-to-hacker-news.git
    cd submit-to-hacker-news
    ```
 
-2. Load in browser (see Installation section above)
+2. Load in browser:
+   - **Chromium browsers**: Load the `chromium/` folder
+   - **Firefox**: Load `firefox/manifest.json`
 
-3. Make changes and reload the extension to test
+3. Make changes to the appropriate folder and reload the extension to test
+
+### Building Packages
+```bash
+# Chrome Web Store package
+cd chromium && zip -r ../submit-to-hacker-news-chromium.zip . -x "*.DS_Store"
+
+# Mozilla Add-ons package  
+cd firefox && zip -r ../submit-to-hacker-news-firefox.zip . -x "*.DS_Store"
+```
 
 ### Testing
 - Test on various websites (blogs, GitHub repos, documentation)
