@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initialize the extension
   try {
     // Get the current active tab
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    const [tab] = await (typeof browser !== 'undefined' ? browser : chrome).tabs.query({ active: true, currentWindow: true });
     
     if (!tab) {
       pageTitle.textContent = 'Error: No active tab';
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Check if this is a "View Discussion" click for a duplicate
       if (submitButton.dataset.duplicateId) {
         const discussionUrl = `https://news.ycombinator.com/item?id=${submitButton.dataset.duplicateId}`;
-        chrome.tabs.create({ url: discussionUrl });
+        (typeof browser !== 'undefined' ? browser : chrome).tabs.create({ url: discussionUrl });
         window.close();
         return;
       }
@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const hackerNewsUrl = `https://news.ycombinator.com/submitlink?u=${encodeURIComponent(currentTab.url)}&t=${encodeURIComponent(customTitle)}`;
       
       // Open Hacker News submission page in a new tab
-      chrome.tabs.create({ url: hackerNewsUrl });
+      (typeof browser !== 'undefined' ? browser : chrome).tabs.create({ url: hackerNewsUrl });
       
       // Close the popup
       window.close();
