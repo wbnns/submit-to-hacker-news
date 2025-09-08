@@ -4,7 +4,8 @@
   "version": "1.4",
   "description": "Submit to Hacker News with title optimization and duplicate detection using keyboard shortcuts",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "*://news.ycombinator.com/*"
   ],
   "browser_action": {
     "default_popup": "popup.html",

@@ -9,13 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - 🎯 **Subdomain handling** - Fixed duplicate detection for subdomains (e.g., hn.wbnns.com now properly searches wbnns.com)
-- 🔍 **Domain matching** - Extension now strips subdomains to match HN's display behavior
-- ⚡ **Improved accuracy** - Finds duplicates that were previously missed due to subdomain differences
+- 🔍 **Domain matching** - Extension now strips subdomains to match HN's display behavior  
+- ⚡ **CORS issue** - Added HN host permission to enable cross-origin duplicate checking
+- 🚀 **Improved accuracy** - Finds duplicates that were previously missed due to subdomain differences
+
+### Added
+- 🌐 **HN host permission** - Allows access to news.ycombinator.com for efficient duplicate detection
+- 📊 **Efficient duplicate detection** - Single request using HN's `/from?site=domain` endpoint instead of 1000+ API calls
 
 ### Technical
 - **Root domain extraction** - Uses last 2 parts of domain for `/from` queries to match HN's subdomain stripping
+- **Cross-origin access** - Added `*://news.ycombinator.com/*` permission for API access
 - **Exact URL matching** - Still maintains precise URL comparison after domain search
 - **Better duplicate coverage** - Finds more existing submissions by understanding HN's domain handling
+- **Respectful to HN servers** - Single HTML request instead of massive parallel API calls
 
 ## [1.3.0] - 2025-09-06
 

@@ -11,6 +11,7 @@ The Submit to Hacker News extension is a free, open-source browser extension tha
 ### Data We Access
 - Current tab URL (only when you actively use the extension)
 - Current tab title (only when you actively use the extension)
+- Hacker News website content (for duplicate checking only)
 
 ### Data We DON'T Collect
 - ❌ No personal information (name, email, etc.)
@@ -27,7 +28,7 @@ The Submit to Hacker News extension is a free, open-source browser extension tha
 
 ## Third Party Services
 
-**Hacker News API:** When checking for duplicates, your current tab URL is sent to `hacker-news.firebaseio.com` (Hacker News' official API). This is governed by [Firebase's Privacy Policy](https://firebase.google.com/support/privacy).
+**Hacker News Website:** When checking for duplicates, the extension accesses `news.ycombinator.com/from?site=domain` to search for existing submissions from the same domain. This is HN's public website and no personal data is transmitted. Only the domain of your current page is used in the search.
 
 ## Terms of Use
 

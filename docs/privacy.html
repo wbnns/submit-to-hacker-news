@@ -157,6 +157,7 @@
             <ul>
                 <li>Current tab URL (only when you actively use the extension)</li>
                 <li>Current tab title (only when you actively use the extension)</li>
+                <li>Hacker News website content (for duplicate checking only)</li>
             </ul>
             
             <p><strong>Data We DON'T Collect:</strong></p>
@@ -180,9 +181,9 @@
 
             <h2>3. Third Party Services</h2>
             <p>
-                <strong>Hacker News API:</strong> When checking for duplicates, your current tab URL is sent to 
-                <code>hacker-news.firebaseio.com</code> (Hacker News' official API). This is governed by 
-                <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's Privacy Policy</a>.
+                <strong>Hacker News Website:</strong> When checking for duplicates, the extension accesses 
+                <code>news.ycombinator.com/from?site=domain</code> to search for existing submissions from the same domain. 
+                This is HN's public website and no personal data is transmitted. Only the domain of your current page is used in the search.
             </p>
 
             <hr>
