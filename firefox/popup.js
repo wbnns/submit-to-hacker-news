@@ -39,11 +39,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Efficient duplicate check using HN's from endpoint
   const checkForDuplicate = async (url) => {
     try {
-      // Extract domain from URL for HN's /from endpoint
+      // Extract root domain for HN's /from endpoint (HN strips subdomains)
       const domain = new URL(url).hostname.replace(/^www\./, '');
+      const rootDomain = domain.split('.').slice(-2).join('.'); // Get last 2 parts (e.g., hn.wbnns.com → wbnns.com)
       
       // Use HN's efficient /from endpoint - single request instead of 1000+
-      const fromUrl = `https://news.ycombinator.com/from?site=${encodeURIComponent(domain)}`;
+      const fromUrl = `https://news.ycombinator.com/from?site=${encodeURIComponent(rootDomain)}`;
       const response = await fetch(fromUrl);
       
       if (!response.ok) return null;

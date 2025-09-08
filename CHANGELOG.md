@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2025-09-07
+
+### Fixed
+- 🎯 **Subdomain handling** - Fixed duplicate detection for subdomains (e.g., hn.wbnns.com now properly searches wbnns.com)
+- 🔍 **Domain matching** - Extension now strips subdomains to match HN's display behavior
+- ⚡ **Improved accuracy** - Finds duplicates that were previously missed due to subdomain differences
+
+### Technical
+- **Root domain extraction** - Uses last 2 parts of domain for `/from` queries to match HN's subdomain stripping
+- **Exact URL matching** - Still maintains precise URL comparison after domain search
+- **Better duplicate coverage** - Finds more existing submissions by understanding HN's domain handling
+
 ## [1.3.0] - 2025-09-06
 
 ### Fixed
