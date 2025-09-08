@@ -8,7 +8,7 @@ A powerful browser extension that enhances your Hacker News submission experienc
 
 - **🚀 One-click submission** with keyboard shortcut (`Ctrl+Shift+H` / `Cmd+Shift+H`)
 - **🧠 Smart title optimization** following HN guidelines automatically
-- **🔍 Duplicate detection** across 1000+ recent stories (finds highest-scored version)
+- **🔍 Efficient duplicate detection** using HN's domain search (finds highest-scored version)
 - **📖 Built-in HN guidelines** with helpful tooltip
 - **✏️ Editable titles** with intelligent placeholder behavior
 - **🎨 Clean, professional UI** inspired by modern design systems
@@ -85,10 +85,11 @@ Show HN: My Python Learning Tool
 - Shows before/after comparison when changes are made
 
 **Duplicate Detection:**
-- Scans 1000+ recent HN stories in seconds
-- Finds highest-scoring version if multiple submissions exist
-- Shows existing discussion stats and direct link
-- Runs in background without blocking the UI
+- Uses HN's efficient `/from?site=domain` endpoint (single request)
+- Finds all submissions from the same domain, matches exact URL
+- Shows highest-scoring version if multiple submissions exist  
+- Displays existing discussion stats and direct link
+- Fast and respectful to HN's servers
 
 **Built-in Guidelines:**
 - Click "Guidelines" for comprehensive HN submission rules

@@ -68,7 +68,7 @@
     
     <!-- Duplicate Detection -->
     <text x="80" y="340">🔍</text>
-    <text x="120" y="340">Duplicate Detection (1000+ stories)</text>
+    <text x="120" y="340">Efficient Duplicate Detection</text>
     
     <!-- Built-in Guidelines -->
     <text x="80" y="380">📖</text>

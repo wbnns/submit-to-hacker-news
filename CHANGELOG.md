@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - 🧠 **Smart title optimization** following HN guidelines automatically
-- 🔍 **Ultra-fast duplicate detection** across 1000+ recent stories  
+- 🔍 **Efficient duplicate detection** using HN's domain search endpoint  
 - 📖 **Built-in HN guidelines** with helpful modal tooltip
 - ⚡ **Keyboard shortcuts** (`Ctrl+Shift+H` / `Cmd+Shift+H`) for quick access
 - 🎨 **Professional v0-style UI** with modern design system
