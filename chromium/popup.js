@@ -36,118 +36,67 @@ document.addEventListener('DOMContentLoaded', async () => {
     errorMessage.style.display = 'none';
   };
 
-  // Ultra-fast duplicate check for 1000+ stories
+  // Efficient duplicate check using HN's from endpoint
   const checkForDuplicate = async (url) => {
     try {
+      // Extract domain from URL for HN's /from endpoint
+      const domain = new URL(url).hostname.replace(/^www\./, '');
+      
+      // Use HN's efficient /from endpoint - single request instead of 1000+
+      const fromUrl = `https://news.ycombinator.com/from?site=${encodeURIComponent(domain)}`;
+      const response = await fetch(fromUrl);
+      
+      if (!response.ok) return null;
+      
+      const html = await response.text();
+      
+      // Parse the HTML to find submissions matching our exact URL
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      
+      const submissions = [];
+      const rows = doc.querySelectorAll('tr.athing');
+      
       const normalizedUrl = url.replace(/\/$/, '').toLowerCase();
       
-      // Get all story lists in parallel immediately
-      const [topResponse, newResponse, bestResponse] = await Promise.all([
-        fetch('https://hacker-news.firebaseio.com/v0/topstories.json'),
-        fetch('https://hacker-news.firebaseio.com/v0/newstories.json'), 
-        fetch('https://hacker-news.firebaseio.com/v0/beststories.json')
-      ]);
-      
-      // Combine all story IDs (remove duplicates)
-      const allIds = new Set();
-      
-      if (topResponse.ok) {
-        const topIds = await topResponse.json();
-        topIds.slice(0, 400).forEach(id => allIds.add(id)); // Top 400
+      for (const row of rows) {
+        const titleLink = row.querySelector('.titleline > a');
+        const scoreElement = row.nextElementSibling?.querySelector('.score');
+        const commentsLink = row.nextElementSibling?.querySelector('a[href*="item?id="]:last-of-type');
+        
+        if (!titleLink) continue;
+        
+        const submissionUrl = titleLink.href.replace(/\/$/, '').toLowerCase();
+        
+        if (submissionUrl === normalizedUrl) {
+          const id = row.id;
+          const title = titleLink.textContent.trim();
+          const scoreText = scoreElement?.textContent || '0 points';
+          const score = parseInt(scoreText.match(/\d+/)?.[0] || '0');
+          const commentsText = commentsLink?.textContent || '0 comments';
+          const descendants = parseInt(commentsText.match(/\d+/)?.[0] || '0');
+          
+          submissions.push({
+            id: id,
+            title: title,
+            score: score,
+            descendants: descendants,
+            time: Date.now() / 1000 // Approximate timestamp
+          });
+        }
       }
       
-      if (newResponse.ok) {
-        const newIds = await newResponse.json();
-        newIds.slice(0, 400).forEach(id => allIds.add(id)); // Latest 400
-      }
+      // Return highest-scoring match if any found
+      if (submissions.length === 0) return null;
       
-      if (bestResponse.ok) {
-        const bestIds = await bestResponse.json();
-        bestIds.slice(0, 300).forEach(id => allIds.add(id)); // Best 300
-      }
-      
-      const uniqueIds = Array.from(allIds);
-      console.log(`Checking ${uniqueIds.length} unique stories for duplicates`);
-      
-      // Use aggressive parallel processing
-      return await checkBatchUltraFast(uniqueIds, normalizedUrl);
+      return submissions.reduce((best, current) => 
+        current.score > best.score ? current : best
+      );
       
     } catch (error) {
       console.error('Duplicate check failed:', error);
       return null;
     }
-  };
-  
-  // Ultra-fast batch checking with massive parallelization - finds highest scoring match
-  const checkBatchUltraFast = async (ids, normalizedUrl) => {
-    const chunkSize = 50; // Much larger chunks
-    const maxConcurrency = 10; // Maximum concurrent chunk processing
-    const allMatches = [];
-    
-    for (let i = 0; i < ids.length; i += chunkSize * maxConcurrency) {
-      // Create up to 10 concurrent chunks
-      const chunkPromises = [];
-      
-      for (let j = 0; j < maxConcurrency && i + j * chunkSize < ids.length; j++) {
-        const chunkStart = i + j * chunkSize;
-        const chunkEnd = Math.min(chunkStart + chunkSize, ids.length);
-        const chunkIds = ids.slice(chunkStart, chunkEnd);
-        
-        chunkPromises.push(processChunk(chunkIds, normalizedUrl));
-      }
-      
-      // Wait for all chunks in this batch to complete
-      const results = await Promise.all(chunkPromises);
-      
-      // Collect all matches from this batch
-      results.forEach(chunkMatches => {
-        if (chunkMatches && chunkMatches.length > 0) {
-          allMatches.push(...chunkMatches);
-        }
-      });
-      
-      // Tiny delay between batches to be API-friendly
-      if (i + chunkSize * maxConcurrency < ids.length) {
-        await new Promise(resolve => setTimeout(resolve, 20));
-      }
-    }
-    
-    // Return the highest-scoring match
-    if (allMatches.length === 0) return null;
-    
-    return allMatches.reduce((best, current) => 
-      current.score > best.score ? current : best
-    );
-  };
-  
-  // Process a single chunk of story IDs and collect all matches
-  const processChunk = async (chunkIds, normalizedUrl) => {
-    const promises = chunkIds.map(async id => {
-      try {
-        const response = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
-        if (!response.ok) return null;
-        
-        const story = await response.json();
-        if (!story?.url) return null;
-        
-        const storyUrl = story.url.replace(/\/$/, '').toLowerCase();
-        if (storyUrl === normalizedUrl) {
-          return {
-            id: story.id,
-            title: story.title,
-            score: story.score || 0,
-            descendants: story.descendants || 0,
-            time: story.time
-          };
-        }
-        return null;
-      } catch {
-        return null;
-      }
-    });
-    
-    const results = await Promise.all(promises);
-    return results.filter(r => r); // Return all matches, not just first
   };
   
   // Show duplicate warning with actual HN title
@@ -254,7 +203,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initialize the extension
   try {
     // Get the current active tab
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    const [tab] = await (typeof browser !== 'undefined' ? browser : chrome).tabs.query({ active: true, currentWindow: true });
     
     if (!tab) {
       pageTitle.textContent = 'Error: No active tab';
@@ -353,7 +302,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Check if this is a "View Discussion" click for a duplicate
       if (submitButton.dataset.duplicateId) {
         const discussionUrl = `https://news.ycombinator.com/item?id=${submitButton.dataset.duplicateId}`;
-        chrome.tabs.create({ url: discussionUrl });
+        (typeof browser !== 'undefined' ? browser : chrome).tabs.create({ url: discussionUrl });
         window.close();
         return;
       }
@@ -370,7 +319,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const hackerNewsUrl = `https://news.ycombinator.com/submitlink?u=${encodeURIComponent(currentTab.url)}&t=${encodeURIComponent(customTitle)}`;
       
       // Open Hacker News submission page in a new tab
-      chrome.tabs.create({ url: hackerNewsUrl });
+      (typeof browser !== 'undefined' ? browser : chrome).tabs.create({ url: hackerNewsUrl });
       
       // Close the popup
       window.close();
