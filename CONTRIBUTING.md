@@ -37,9 +37,11 @@ cd submit-to-hacker-news
 git checkout -b feature/your-feature-name
 ```
 
+**Note**: The extension is available on [Chrome Web Store](https://chromewebstore.google.com/detail/submit-to-hacker-news/alleeofhkkjaiaelnpobphljpfelfiin) and [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/submit-to-hacker-news/) for regular users. For development and testing, use the manual installation below.
+
 #### Testing Your Changes
-- **Load in Chrome**: Go to `chrome://extensions/`, enable Developer mode, click "Load unpacked"
-- **Load in Firefox**: Go to `about:debugging`, click "Load Temporary Add-on", select `manifest-v2.json`
+- **Load in Chrome**: Go to `chrome://extensions/`, enable Developer mode, click "Load unpacked", select the `chromium/` folder
+- **Load in Firefox**: Go to `about:debugging`, click "Load Temporary Add-on", select `firefox/manifest.json`
 - **Test on various websites**: Try different content types (blogs, GitHub repos, PDFs, videos)
 - **Test edge cases**: Long titles, special characters, non-English content
 - **Test duplicate detection**: Try URLs you know have been submitted to HN

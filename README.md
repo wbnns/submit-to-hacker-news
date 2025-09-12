@@ -50,7 +50,20 @@ Show HN: My Python Learning Tool
 
 ## 🚀 Installation
 
-### Chrome, Edge, Brave
+### Chrome Web Store ⭐ **Recommended**
+Install directly from the official Chrome Web Store:
+
+**[🔗 Install for Chrome, Edge & Brave](https://chromewebstore.google.com/detail/submit-to-hacker-news/alleeofhkkjaiaelnpobphljpfelfiin)**
+
+### Firefox Add-ons ⭐ **Recommended**
+Install directly from the official Mozilla Add-ons store:
+
+**[🔗 Install for Firefox](https://addons.mozilla.org/en-US/firefox/addon/submit-to-hacker-news/)**
+
+### Manual Installation (Developer Mode)
+For developers or if you want to modify the extension:
+
+#### Chrome, Edge, Brave
 1. Download or clone this repository
 2. Open your browser's extensions page:
    - Chrome: `chrome://extensions/`
@@ -60,7 +73,7 @@ Show HN: My Python Learning Tool
 4. Click "Load unpacked" and select the **`chromium/`** folder
 5. The extension will appear in your toolbar
 
-### Firefox
+#### Firefox
 1. Download or clone this repository  
 2. Open Firefox and go to `about:debugging`
 3. Click "This Firefox" in the left sidebar
@@ -168,7 +181,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📋 Roadmap
 
-- [ ] **Chrome Web Store** and **Firefox Add-ons** publication
+- [x] **Chrome Web Store** and **Firefox Add-ons** publication ✅
 - [ ] **Custom submission templates** for different content types
 - [ ] **Submission history** and analytics
 - [ ] **Dark mode** support
